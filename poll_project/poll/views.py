@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.shortcuts import redirect
+from django.shortcuts import redirect,HttpResponse
 
 from .forms import CreatePollForm
 from .models import Poll
