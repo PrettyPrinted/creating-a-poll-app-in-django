@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.shortcuts import redirect
+from django.shortcuts import redirect,HttpResponse
 
 from .forms import CreatePollForm
 from .models import Poll
@@ -51,7 +51,8 @@ def vote(request, poll_id):
     
         poll.save()
 
-        return redirect('results', poll.id)
+        # return redirect('results', poll.id)
+        return redirect('home')
 
     context = {
         'poll' : poll
